@@ -63,7 +63,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin-bottom: 2em; */
+  overflow-x: hidden;
 
   a {
     text-decoration: none;
@@ -76,7 +76,7 @@ nav {
 
   .nav__links {
     display: flex;
-    width: 40%;
+    width: 50%;
     /* background: green; */
     gap: 1em;
     list-style-type: none;
@@ -118,7 +118,7 @@ nav {
 
 @media (min-width: 1024px) {
   nav .nav__links {
-    width: 30%;
+    width: 32%;
   }
 }
 

@@ -42,6 +42,20 @@ export default {
   box-sizing: border-box;
   border: 0;
 }
+
+.button {
+  display: flex;
+  background: #d8d8d8;
+  padding: 1em 2em;
+  cursor: pointer;
+  transition: background 200ms ease-in-out, color 200ms ease-in-out;
+  border-radius: 1px;
+  &:hover {
+    background: #1a1a1a;
+    color: #fff;
+  }
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

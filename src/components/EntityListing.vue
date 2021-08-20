@@ -1,17 +1,42 @@
 <script>
+import ShipCard from "./ShipCard.vue";
+
 export default {
   name: "EntityListing",
+  props: {
+    title: String,
+  },
   components: {
-    // components listed here
+    ShipCard,
   },
 };
 </script>
 
 <template>
   <div>
-    <h1>A LIST OF ENTITIES</h1>
+    <div class="section__title">
+      <h3>{{ title }}</h3>
+    </div>
+    <section class="container">
+      <!-- A LIST OF ENTITIES -->
+      <ShipCard />
+      <ShipCard />
+      <ShipCard />
+      <ShipCard />
+      <ShipCard />
+      <ShipCard />
+    </section>
   </div>
 </template>
 
 <style lang="scss" scoped>
+.section__title {
+  padding: 16px 0;
+}
+.container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 3fr);
+  gap: 2em;
+}
 </style>
