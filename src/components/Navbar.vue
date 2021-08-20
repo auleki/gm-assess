@@ -3,7 +3,14 @@ export default {
   name: "Navbar",
   props: ["name", "logoImage", "navLinks"],
   methods: {
-    collapseNavbar() {
+    closeNavbar() {
+      const burger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav__links");
+
+      navLinks.classList.toggle("nav-active");
+      burger.classList.toggle("toggle");
+    },
+    toggleNavbar() {
       const burger = document.querySelector(".hamburger");
       const navLinks = document.querySelector(".nav__links");
       const navLink = document.querySelectorAll(".nav__links li");
@@ -32,11 +39,11 @@ export default {
       <h2>STAR WARS</h2>
     </div>
     <ul class="nav__links">
-      <li v-for="item in navLinks" :key="item.key">
+      <li v-for="item in navLinks" @click="closeNavbar()" :key="item.key">
         <router-link :to="item.path">{{ item.name }}</router-link>
       </li>
     </ul>
-    <div class="hamburger" @click="collapseNavbar()">
+    <div class="hamburger" @click="toggleNavbar()">
       <div class="line1"></div>
       <div class="line2"></div>
       <div class="line3"></div>
@@ -46,6 +53,7 @@ export default {
 
 <style scoped lang="scss">
 nav {
+  /* use icons instead, have active icon hover animation */
   height: 100%;
   width: 100%;
   background: #f8f8f8;
@@ -55,7 +63,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2em;
+  /* margin-bottom: 2em; */
 
   a {
     text-decoration: none;
@@ -128,12 +136,15 @@ nav {
       background: rgb(20, 20, 20);
       top: 100%;
       left: -100%;
-      transition: left 150ms ease-in-out;
+      /* right: 0; */
+      transition: left 200ms ease-in-out, opacity 55ms ease-in;
+      opacity: 0;
       border-bottom-right-radius: 10px;
       border-bottom-left-radius: 10px;
       &.nav-active {
         left: 0;
         box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+        opacity: 1;
       }
     }
     .hamburger {

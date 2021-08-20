@@ -1,11 +1,11 @@
 <script>
-import TopNav from "@/components/TopNav.vue";
 import Navbar from "@/components/Navbar.vue";
+import Header from "@/components/Header.vue";
 
 export default {
   components: {
-    TopNav,
     Navbar,
+    Header,
   },
 };
 </script>
@@ -14,8 +14,12 @@ export default {
   <Navbar
     :navLinks="[
       {
-        name: 'Warships',
+        name: 'Home',
         path: '/',
+      },
+      {
+        name: 'Warships',
+        path: '/warships',
       },
       {
         name: 'Characters',
@@ -27,6 +31,7 @@ export default {
       },
     ]"
   />
+  <Header />
   <router-view />
 </template>
 

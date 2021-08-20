@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <Header />
     <h3>New World</h3>
   </div>
 </template>
@@ -13,7 +12,7 @@ import Header from "@/components/Header.vue";
 export default {
   name: "Home",
   components: {
-    Header,
+    // components go in here
   },
 };
 </script>

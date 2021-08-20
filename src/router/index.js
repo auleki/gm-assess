@@ -5,12 +5,12 @@ import Characters from '../views/Characters.vue'
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'Homepage',
     component: Home
   },
   {
     path: '/characters',
-    name: 'About',
+    name: 'Characters',
     component: Characters
   },
   {
