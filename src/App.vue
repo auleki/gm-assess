@@ -1,15 +1,32 @@
 <script>
 import TopNav from "@/components/TopNav.vue";
+import Navbar from "@/components/Navbar.vue";
 
 export default {
   components: {
     TopNav,
+    Navbar,
   },
 };
 </script>
 
 <template>
-  <TopNav />
+  <Navbar
+    :navLinks="[
+      {
+        name: 'Warships',
+        path: '/',
+      },
+      {
+        name: 'Characters',
+        path: '/characters',
+      },
+      {
+        name: 'About',
+        path: '/about',
+      },
+    ]"
+  />
   <router-view />
 </template>
 

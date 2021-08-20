@@ -11,7 +11,8 @@ export default {
     </div>
     <div class="nav__links">
       <router-link to="/">STARSHIPS</router-link>
-      <router-link to="/about">CHARACTERS</router-link>
+      <router-link to="/about">ABOUT</router-link>
+      <router-link to="/characters">CHARACTERS</router-link>
     </div>
   </nav>
 </template>
