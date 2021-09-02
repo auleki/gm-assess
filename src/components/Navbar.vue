@@ -63,7 +63,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 
   a {
     text-decoration: none;
