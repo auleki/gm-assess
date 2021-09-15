@@ -1,5 +1,29 @@
+<script>
+import Character from '@/components/Character.vue'
+import PageTitle from '@/components/PageTitle.vue'
+export default {
+  name: "Characters",
+  components: {
+    Character, 
+    PageTitle
+  }
+}
+</script>
+
 <template>
   <div class="page">
-    <h1>Characters Page Here</h1>
+    <PageTitle title="Starwars Characters"/>
+    <section class="characters__section">
+      <Character />
+    </section>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.characters__section {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1em;
+  column-gap: .5em;
+}
+</style>

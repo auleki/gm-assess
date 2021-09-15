@@ -17,7 +17,6 @@ export default {
   </header>
 </template>
 
-
 <style scoped lang="scss">
 header {
   height: 200px * 2;
@@ -25,7 +24,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #ff4444;
+  background: #2163f1;
 }
 
 .search__bar {

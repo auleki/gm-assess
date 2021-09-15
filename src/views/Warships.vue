@@ -1,16 +1,22 @@
 <script>
 import Warship from '@/components/Warship.vue'
+import PageTitle from '@/components/PageTitle.vue'
 export default {
   name: "Warships",
   components: {
-    Warship
+    Warship,
+    PageTitle
   }
 };
 </script>
 
 <template>
   <div>
-    <h1>Warships</h1>
+    <PageTitle title="Starwars Warship" />
+    <Warship />
+    <Warship />
+    <Warship />
+    <Warship />
     <Warship />
   </div>
 </template>

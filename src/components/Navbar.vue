@@ -85,6 +85,12 @@ nav {
     flex-direction: column;
     gap: 0.5em;
     display: none;
+    cursor: pointer;
+    &:hover {
+      div {
+        background-color: #ff3131;        
+      }
+    }
     &.toggle {
       color: crimson;
       .line1 {
@@ -100,6 +106,8 @@ nav {
     div {
       height: 3px;
       width: 30px;
+      border-radius: 15px;
+      transition: 200ms ease-in background-color;
       background-color: #1a1a1a;
     }
   }
@@ -135,14 +143,15 @@ nav {
       width: 100%;
       background: rgb(20, 20, 20);
       top: 100%;
-      left: -100%;
+      // left: -100%;
+      left: 0;
       /* right: 0; */
-      transition: left 200ms ease-in-out, opacity 55ms ease-in;
+      transition: left 200ms ease-in-out, opacity 155ms ease-in;
       opacity: 0;
       border-bottom-right-radius: 10px;
       border-bottom-left-radius: 10px;
       &.nav-active {
-        left: 0;
+        // left: 0;
         box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
         opacity: 1;
       }
