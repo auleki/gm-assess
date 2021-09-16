@@ -25,7 +25,7 @@ export default {
 }
 
 h2 {
-  padding: .5em;
+  padding: .2em;
 }
 
 .line {

@@ -15,6 +15,11 @@ export default {
     <PageTitle title="Starwars Characters"/>
     <section class="characters__section">
       <Character />
+      <Character />
+      <Character />
+      <Character />
+      <Character />
+      <Character />
     </section>
   </div>
 </template>
@@ -23,6 +28,7 @@ export default {
 .characters__section {
   display: flex;
   flex-wrap: wrap;
+  padding: 0 1rem;
   row-gap: 1em;
   column-gap: .5em;
 }
